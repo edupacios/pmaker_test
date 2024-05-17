@@ -1,0 +1,12 @@
+
+
+[1;37;40mCode Coverage Report:  [0m
+[1;37;40m  2024-05-17 20:58:01  [0m
+[1;37;40m                       [0m
+[1;37;40m Summary:              [0m
+[37;41m  Classes: 50.00% (1/2)[0m
+[30;43m  Methods: 66.67% (2/3)[0m
+[37;41m  Lines:   33.33% (2/6)[0m
+
+App\Providers\AppServiceProvider
+  [30;42mMethods: 100.00% ( 2/ 2)[0m   [30;42mLines: 100.00% (  2/  2)[0m
