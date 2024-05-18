@@ -1,5 +1,6 @@
 <script setup>
 import { ref, defineEmits } from 'vue';
+defineEmits(['close', 'update']);
 
 const props = defineProps({
     task: {
@@ -9,7 +10,6 @@ const props = defineProps({
 });
 
 const currentTask = ref({ ...props.task });
-defineEmits(['close', 'save']);
 
 </script>
 
@@ -45,7 +45,7 @@ defineEmits(['close', 'save']);
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" @click="$emit('close')">Close</button>
-                    <button type="button" class="btn btn-primary" @click="$emit('save', currentTask)">Save changes</button>
+                    <button type="button" class="btn btn-primary" @click="$emit('update', currentTask)">Save changes</button>
                 </div>
             </div>
         </div>

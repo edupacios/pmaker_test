@@ -54,8 +54,16 @@ class TaskController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateTaskRequest $request, Task $task)
+    public function update(UpdateTaskRequest $request, $id)
     {
-        throw new \Exception('Update method not implemented');
+        $task = Task::find($id);
+        $task->user_id = $request->user_id;
+        $task->name = $request->name;
+        $task->code = $request->code;
+        $task->description = $request->description;
+        $task->status = $request->status;
+        $task->save();
+
+        return response()->json(['success' => true, 'task' => $task]);
     }
 }

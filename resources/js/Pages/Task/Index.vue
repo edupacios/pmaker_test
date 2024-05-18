@@ -3,12 +3,14 @@ import { ref } from 'vue';
 import { Head } from '@inertiajs/vue3';
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
 import ModalComp from '@/Components/ModalComp.vue';
-import axios from 'axios';
 
-defineProps({
+const props = defineProps({
     tasks: {
         type: Array,
         required: true,
+    },
+    auth: {
+        type: Object
     }
 });
 
@@ -46,7 +48,7 @@ const submitHandler = (updatedTask) => {
                     <ModalComp title="Edit task"
                             :task="editingTask"
                             @close="closeModal"
-                            @save="submitHandler" />
+                            @update="submitHandler" />
                 </div>
             </Teleport>
 
@@ -63,7 +65,7 @@ const submitHandler = (updatedTask) => {
                         <a :href="route('task.create')" class="link-primary">Create one now.</a>
                     </div>
                     <div v-else>
-                        <div class="card mb-2" v-for="task in tasks" :key="task.id">
+                        <div class="card mb-2" v-for="task in props.tasks" :key="task.id">
                             <div class="card-header">
                                 Code: {{ task.code }}
                             </div>
