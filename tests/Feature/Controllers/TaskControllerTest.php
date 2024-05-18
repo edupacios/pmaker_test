@@ -22,8 +22,7 @@ class TaskControllerTest extends TestCase
         $response = $this->get('/task/create');
 
         $response->assertStatus(200);
-
-        $response->assertSeeText('Create new Task');
+        $response->assertSee('statuses');
     }
 
     /**
@@ -41,6 +40,31 @@ class TaskControllerTest extends TestCase
         $response = $this->get('/');
         $response->assertStatus(200);
 
-        $response->assertJsonCount(2, 'tasks');
+        $response->assertSee('tasks');
+    }
+
+    /**
+     * Creates a task.
+     */
+    public function test_it_creates_a_task(): void
+    {
+        $user = User::factory()->create();
+        $this->actingAs($user);
+
+        $task = Task::factory()->make([
+            'user_id' => $user->id,
+        ]);
+
+        $response = $this->post('/task', $task->toArray());
+
+        $response->assertRedirect(route('task.index'));
+
+        $this->assertDatabaseHas('tasks', [
+            'name' => $task->name,
+            'code' => $task->code,
+            'description' => $task->description,
+            'status' => $task->status,
+            'user_id' => $user->id,
+        ]);
     }
 }

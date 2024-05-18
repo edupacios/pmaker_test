@@ -12,7 +12,7 @@ class TaskControllerApiTest extends TestCase
     use RefreshDatabase;
 
     /**
-     * A basic test example.
+     * Test that a task can be updated through API.
      */
     public function test_that_a_record_can_be_updated_through_api(): void
     {
