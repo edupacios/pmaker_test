@@ -22,6 +22,6 @@ class TaskController extends Controller
         $task->status = $request->status;
         $task->save();
 
-        return response()->json(['success' => true, 'task' => $task]);
+        return response()->json(['success' => true, 'task' => $task], 200);
     }
 }

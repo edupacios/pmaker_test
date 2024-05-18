@@ -10,6 +10,7 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 class TaskControllerApiTest extends TestCase
 {
     use RefreshDatabase;
+
     /**
      * A basic test example.
      */
@@ -31,6 +32,13 @@ class TaskControllerApiTest extends TestCase
             'status' => 'inactive',
         ]);
 
-        $response->assertStatus(200);
+        $updatedTask = Task::find($task->id);
+
+        $response
+            ->assertStatus(200)
+            ->assertJson([
+                'success' => true,
+                'task' => $updatedTask->toArray(),
+            ]);
     }
 }

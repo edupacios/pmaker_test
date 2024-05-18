@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1716066295">
-  <project timestamp="1716066295">
+<coverage generated="1716068475">
+  <project timestamp="1716068475">
     <file name="/var/www/html/app/Enums/Status.php">
       <metrics loc="8" ncloc="8" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
     </file>
@@ -189,18 +189,18 @@
     </file>
     <file name="/var/www/html/app/Http/Controllers/TaskController.php">
       <class name="App\Http\Controllers\TaskController" namespace="global">
-        <metrics complexity="4" methods="4" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="24" coveredstatements="8" elements="28" coveredelements="9"/>
+        <metrics complexity="4" methods="4" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="24" coveredstatements="16" elements="28" coveredelements="19"/>
       </class>
-      <line num="17" type="method" name="index" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="19" type="stmt" count="0"/>
-      <line num="21" type="stmt" count="0"/>
-      <line num="22" type="stmt" count="0"/>
-      <line num="23" type="stmt" count="0"/>
-      <line num="29" type="method" name="create" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="31" type="stmt" count="0"/>
-      <line num="33" type="stmt" count="0"/>
-      <line num="34" type="stmt" count="0"/>
-      <line num="35" type="stmt" count="0"/>
+      <line num="17" type="method" name="index" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="19" type="stmt" count="1"/>
+      <line num="21" type="stmt" count="1"/>
+      <line num="22" type="stmt" count="1"/>
+      <line num="23" type="stmt" count="1"/>
+      <line num="29" type="method" name="create" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="31" type="stmt" count="1"/>
+      <line num="33" type="stmt" count="1"/>
+      <line num="34" type="stmt" count="1"/>
+      <line num="35" type="stmt" count="1"/>
       <line num="41" type="method" name="store" visibility="public" complexity="1" crap="2" count="0"/>
       <line num="43" type="stmt" count="0"/>
       <line num="44" type="stmt" count="0"/>
@@ -219,7 +219,7 @@
       <line num="64" type="stmt" count="1"/>
       <line num="65" type="stmt" count="1"/>
       <line num="67" type="stmt" count="1"/>
-      <metrics loc="70" ncloc="58" classes="1" methods="4" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="24" coveredstatements="8" elements="28" coveredelements="9"/>
+      <metrics loc="70" ncloc="58" classes="1" methods="4" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="24" coveredstatements="16" elements="28" coveredelements="19"/>
     </file>
     <file name="/var/www/html/app/Http/Middleware/EnsureEmailIsVerified.php">
       <class name="App\Http\Middleware\EnsureEmailIsVerified" namespace="global">
@@ -237,16 +237,16 @@
       <class name="App\Http\Middleware\HandleInertiaRequests" namespace="global">
         <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="8" elements="10" coveredelements="10"/>
       </class>
-      <line num="20" type="method" name="version" visibility="public" complexity="1" crap="1" count="2"/>
-      <line num="22" type="stmt" count="2"/>
-      <line num="30" type="method" name="share" visibility="public" complexity="1" crap="1" count="6"/>
-      <line num="32" type="stmt" count="6"/>
-      <line num="33" type="stmt" count="6"/>
-      <line num="34" type="stmt" count="6"/>
-      <line num="35" type="stmt" count="6"/>
-      <line num="36" type="stmt" count="6"/>
-      <line num="37" type="stmt" count="6"/>
-      <line num="38" type="stmt" count="6"/>
+      <line num="20" type="method" name="version" visibility="public" complexity="1" crap="1" count="4"/>
+      <line num="22" type="stmt" count="4"/>
+      <line num="30" type="method" name="share" visibility="public" complexity="1" crap="1" count="8"/>
+      <line num="32" type="stmt" count="8"/>
+      <line num="33" type="stmt" count="8"/>
+      <line num="34" type="stmt" count="8"/>
+      <line num="35" type="stmt" count="8"/>
+      <line num="36" type="stmt" count="8"/>
+      <line num="37" type="stmt" count="8"/>
+      <line num="38" type="stmt" count="8"/>
       <metrics loc="41" ncloc="28" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="8" elements="10" coveredelements="10"/>
     </file>
     <file name="/var/www/html/app/Http/Requests/Auth/LoginRequest.php">
@@ -324,11 +324,11 @@
       <class name="App\Models\User" namespace="global">
         <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="5" coveredelements="5"/>
       </class>
-      <line num="41" type="method" name="casts" visibility="protected" complexity="1" crap="1" count="5"/>
-      <line num="43" type="stmt" count="5"/>
-      <line num="44" type="stmt" count="5"/>
-      <line num="45" type="stmt" count="5"/>
-      <line num="46" type="stmt" count="5"/>
+      <line num="41" type="method" name="casts" visibility="protected" complexity="1" crap="1" count="7"/>
+      <line num="43" type="stmt" count="7"/>
+      <line num="44" type="stmt" count="7"/>
+      <line num="45" type="stmt" count="7"/>
+      <line num="46" type="stmt" count="7"/>
       <metrics loc="49" ncloc="33" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="5" coveredelements="5"/>
     </file>
     <file name="/var/www/html/app/Policies/TaskPolicy.php">
@@ -355,14 +355,14 @@
       <class name="App\Providers\AppServiceProvider" namespace="global">
         <metrics complexity="2" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="3" elements="6" coveredelements="4"/>
       </class>
-      <line num="13" type="method" name="register" visibility="public" complexity="1" crap="1" count="7"/>
-      <line num="16" type="stmt" count="7"/>
-      <line num="21" type="method" name="boot" visibility="public" complexity="1" crap="1.04" count="7"/>
-      <line num="23" type="stmt" count="7"/>
+      <line num="13" type="method" name="register" visibility="public" complexity="1" crap="1" count="9"/>
+      <line num="16" type="stmt" count="9"/>
+      <line num="21" type="method" name="boot" visibility="public" complexity="1" crap="1.04" count="9"/>
+      <line num="23" type="stmt" count="9"/>
       <line num="24" type="stmt" count="0"/>
-      <line num="25" type="stmt" count="7"/>
+      <line num="25" type="stmt" count="9"/>
       <metrics loc="28" ncloc="21" classes="1" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="3" elements="6" coveredelements="4"/>
     </file>
-    <metrics files="22" loc="870" ncloc="688" classes="20" methods="43" coveredmethods="16" conditionals="0" coveredconditionals="0" statements="190" coveredstatements="70" elements="233" coveredelements="86"/>
+    <metrics files="22" loc="870" ncloc="688" classes="20" methods="43" coveredmethods="18" conditionals="0" coveredconditionals="0" statements="190" coveredstatements="78" elements="233" coveredelements="96"/>
   </project>
 </coverage>
