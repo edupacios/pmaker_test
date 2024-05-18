@@ -11,8 +11,19 @@ import { Link } from '@inertiajs/vue3';
                         <li><strong>Code test</strong></li>
                     </ul>
                     <div class="text-end">
-                        <Link :href="route('register')" class="btn btn-outline-success" method="get" as="button">
+                        <Link v-if="!route().current('register')"
+                              :href="route('register')"
+                              class="btn btn-outline-success"
+                              method="get"
+                              as="button">
                             Register
+                        </Link>
+                        <Link v-else
+                              :href="route('login')"
+                              class="btn btn-outline-success"
+                              method="get"
+                              as="button">
+                            Login
                         </Link>
                     </div>
                 </div>

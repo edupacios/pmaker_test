@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreTaskRequest;
 use App\Http\Requests\UpdateTaskRequest;
 use Illuminate\Http\Request;
+use App\Enums\Status;
 use App\Models\Task;
 use Inertia\Inertia;
 
@@ -27,7 +28,11 @@ class TaskController extends Controller
      */
     public function create()
     {
-        throw new \Exception('Create method not implemented');
+        $statuses = Status::cases();
+
+        return Inertia::render('Task/Create', [
+            'statuses' => $statuses,
+        ]);
     }
 
     /**
@@ -35,7 +40,15 @@ class TaskController extends Controller
      */
     public function store(StoreTaskRequest $request)
     {
-        throw new \Exception('Store method not implemented');
+        $task = new Task();
+        $task->name = $request->name;
+        $task->code = $request->code;
+        $task->description = $request->description;
+        $task->status = $request->status;
+        $task->user_id = \Auth::user()->id;
+        $task->save();
+
+        return redirect()->route('task.index');
     }
 
     /**
