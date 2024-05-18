@@ -54,12 +54,12 @@ const submit = () => {
                     </div>
 
                     <div class="mb-3">
-                        <select class="form-select form-select-sm status_options" v-model="form.status" name="status">
+                        <select class="form-select form-select-sm text-capitalize" v-model="form.status" name="status">
                             <option v-for="status in statuses" :key="status" :value="status">{{ status }}</option>
                         </select>
                     </div>
 
-                    <button type="submit" class="btn btn-primary">Create Task</button>
+                    <button type="submit" class="btn btn-primary float-end">Save task</button>
                 </form>
             </div>
         </div>
@@ -70,9 +70,5 @@ const submit = () => {
 <style scoped>
     textarea {
         resize: none;
-    }
-
-    .status_options {
-        text-transform: capitalize;
     }
 </style>
