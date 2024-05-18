@@ -3,11 +3,23 @@ import { Link } from '@inertiajs/vue3';
 </script>
 
 <template>
-    <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100">
-        <div
-            class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg"
-        >
+    <div>
+        <header class="p-3 mb-5 border-bottom">
+            <div class="container">
+                <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                    <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-end mb-md-0">
+                        <li><strong>Code test</strong></li>
+                    </ul>
+                    <div class="text-end">
+                        <Link :href="route('register')" class="btn btn-outline-success" method="get" as="button">
+                            Register
+                        </Link>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
             <slot />
-        </div>
+        </main>
     </div>
 </template>
