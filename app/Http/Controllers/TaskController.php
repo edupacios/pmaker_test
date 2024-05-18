@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreTaskRequest;
 use App\Http\Requests\UpdateTaskRequest;
+use Illuminate\Http\Request;
 use App\Models\Task;
 use Inertia\Inertia;
 
@@ -14,10 +15,10 @@ class TaskController extends Controller
      */
     public function index()
     {
-        $tasks = Task::all()->orderBy('created_at', 'desc');
+        $tasks = Task::where('user_id', \Auth::user()->id)->orderBy('created_at', 'desc')->get();
 
-        return view('tasks.index', [
-            'tasks' => $tasks
+        return Inertia::render('Task/Index', [
+            'tasks' => $tasks,
         ]);
     }
 

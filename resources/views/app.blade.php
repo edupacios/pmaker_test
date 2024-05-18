@@ -4,13 +4,17 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Code Test - Login</title>
+        <title>Code Test</title>
 
-        @vite(['resources/css/app.scss', 'resources/js/app.js'])
+        @routes
+        @vite(['resources/js/app.js', "resources/js/Pages/{$page['component']}.vue"])
+        @inertiaHead
     </head>
 
     <body class="font-sans antialiased dark:bg-black dark:text-white/50">
-        @yield('content')
+        <div class="container">
+            @inertia
+        </div>
     </body>
 
 </html>
