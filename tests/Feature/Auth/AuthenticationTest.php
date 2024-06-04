@@ -19,15 +19,20 @@ class AuthenticationTest extends TestCase
 
     public function test_users_can_authenticate_using_the_login_screen(): void
     {
-        $user = User::factory()->create();
+        $password = bcrypt('password');
+
+        $user = User::factory()->create([
+            'password' => $password
+        ]);
 
         $response = $this->post('/login', [
             'email' => $user->email,
-            'password' => 'password',
+            'password' => $password,
         ]);
 
         $this->assertAuthenticated();
-        $response->assertRedirect(route('task.index', absolute: false));
+
+        $response->assertRedirect(route('task.index'));
     }
 
     public function test_users_can_not_authenticate_with_invalid_password(): void

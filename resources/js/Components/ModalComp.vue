@@ -25,11 +25,11 @@ const currentTask = ref({ ...props.task });
                     <form>
                         <div class="mb-3">
                             <label for="name" class="form-label">Name</label>
-                            <input type="text" v-model="currentTask.name" class="form-control form-control-sm" id="name" name="name">
+                            <input type="text" v-model="currentTask.name" class="form-control" id="name" name="name">
                         </div>
                         <div class="mb-3">
                             <label for="code" class="form-label">Code</label>
-                            <input type="text" v-model="currentTask.code" class="form-control form-control-sm" id="code" name="code">
+                            <input type="text" v-model="currentTask.code" class="form-control" id="code" name="code">
                         </div>
                         <div class="mb-3">
                             <label for="description" class="form-label">Description</label>
