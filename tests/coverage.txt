@@ -1,17 +1,17 @@
 
 
 [1;37;40mCode Coverage Report:     [0m
-[1;37;40m  2024-05-18 22:20:01     [0m
+[1;37;40m  2024-06-11 20:26:48     [0m
 [1;37;40m                          [0m
 [1;37;40m Summary:                 [0m
-[30;43m  Classes: 81.82% (9/11)  [0m
-[30;42m  Methods: 91.30% (21/23) [0m
-[30;42m  Lines:   91.09% (92/101)[0m
+[30;43m  Classes: 72.73% (8/11)  [0m
+[30;43m  Methods: 82.61% (19/23) [0m
+[30;43m  Lines:   82.18% (83/101)[0m
 
 App\Http\Controllers\Api\TaskController
   [30;42mMethods: 100.00% ( 1/ 1)[0m   [30;42mLines: 100.00% (  8/  8)[0m
 App\Http\Controllers\Auth\AuthenticatedSessionController
-  [30;42mMethods: 100.00% ( 3/ 3)[0m   [30;42mLines: 100.00% ( 11/ 11)[0m
+  [30;43mMethods:  66.67% ( 2/ 3)[0m   [30;43mLines:  81.82% (  9/ 11)[0m
 App\Http\Controllers\Auth\RegisteredUserController
   [30;42mMethods: 100.00% ( 2/ 2)[0m   [30;42mLines: 100.00% ( 14/ 14)[0m
 App\Http\Controllers\TaskController
@@ -19,7 +19,7 @@ App\Http\Controllers\TaskController
 App\Http\Middleware\HandleInertiaRequests
   [30;42mMethods: 100.00% ( 2/ 2)[0m   [30;42mLines: 100.00% (  8/  8)[0m
 App\Http\Requests\Auth\LoginRequest
-  [30;43mMethods:  80.00% ( 4/ 5)[0m   [30;43mLines:  65.22% ( 15/ 23)[0m
+  [30;43mMethods:  60.00% ( 3/ 5)[0m   [37;41mLines:  34.78% (  8/ 23)[0m
 App\Http\Requests\StoreTaskRequest
   [30;42mMethods: 100.00% ( 2/ 2)[0m   [30;42mLines: 100.00% (  6/  6)[0m
 App\Http\Requests\UpdateTaskRequest
