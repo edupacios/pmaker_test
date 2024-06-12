@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreTaskRequest;
+use App\Services\Task\ITaskService;
 use Illuminate\Http\Request;
 use App\Enums\Status;
 use App\Models\Task;
@@ -10,13 +11,20 @@ use Inertia\Inertia;
 
 class TaskController extends Controller
 {
+    private ITaskService $taskService;
+
+    public function __construct(ITaskService $taskService)
+    {
+        $this->taskService = $taskService;
+    }
+
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $tasks = Task::where('user_id', \Auth::user()->id)->orderBy('created_at', 'desc')->get();
-
+        $tasks = $this->taskService->getTasks();
+        dd($tasks);
         return Inertia::render('Task/Index', [
             'tasks' => $tasks,
         ]);

@@ -36,13 +36,13 @@ const submit = () => {
                 <form @submit.prevent="submit" >
                     <div class="mb-3">
                         <label for="name" class="form-label">Name</label>
-                        <input type="text" v-model="form.name" class="form-control form-control-sm" id="name" name="name">
+                        <input type="text" v-model="form.name" class="form-control" id="name" name="name">
 
                         <InputError class="mt-2" :message="form.errors.name" />
                     </div>
                     <div class="mb-3">
                         <label for="code" class="form-label">Code</label>
-                        <input type="text" v-model="form.code" class="form-control form-control-sm" id="code" name="code">
+                        <input type="text" v-model="form.code" class="form-control" id="code" name="code">
 
                         <InputError class="mt-2" :message="form.errors.code" />
                     </div>

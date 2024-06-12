@@ -28,27 +28,27 @@ const submit = () => {
                     <form @submit.prevent="submit">
                         <h1 class="h3 mb-3 fw-normal text-center">Register</h1>
 
-                        <div class="form-floating mb-2">
+                        <div class="form-floating mb-2 shadow-sm bg-body rounded">
                             <input type="name" class="form-control" id="name" v-model="form.name">
                             <label for="name">Name</label>
 
                             <InputError class="mt-2" :message="form.errors.name" />
                         </div>
-                        <div class="form-floating mb-2">
+                        <div class="form-floating mb-2 shadow-sm bg-body rounded">
                             <input type="email" class="form-control" id="email" v-model="form.email">
                             <label for="email">Email address</label>
 
                             <InputError class="mt-2" :message="form.errors.email" />
                         </div>
 
-                        <div class="form-floating mb-2">
+                        <div class="form-floating mb-2 shadow-sm bg-body rounded">
                             <input autocomplete="new-password" type="password" class="form-control" id="password" v-model="form.password">
                             <label for="password">Password</label>
 
                             <InputError class="mt-2" :message="form.errors.password" />
                         </div>
 
-                        <div class="form-floating mb-2">
+                        <div class="form-floating mb-2 shadow-sm bg-body rounded">
                             <input type="password" class="form-control" id="password_confirmation" v-model="form.password_confirmation">
                             <label for="password_confirmation">Password confirmation</label>
 
