@@ -19,8 +19,6 @@ class TaskServiceTest extends TestCase
     /**
      * Get tasks method is called once.
      * @group services
-     *
-     * @return void
      */
     public function test_get_tasks_method_is_called_once(): void
     {
@@ -35,6 +33,5 @@ class TaskServiceTest extends TestCase
         );
 
         $response = $this->get('/');
-
     }
 }
