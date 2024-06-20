@@ -5,11 +5,10 @@ namespace Tests\Feature\Auth;
 use Tests\TestCase;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Foundation\Testing\DatabaseMigrations;
 
 class AuthenticationTest extends TestCase
 {
-    use DatabaseMigrations;
+    use RefreshDatabase;
 
     public function test_login_screen_can_be_rendered(): void
     {
@@ -20,10 +19,12 @@ class AuthenticationTest extends TestCase
 
     public function test_users_can_authenticate_using_the_login_screen(): void
     {
-        $password = bcrypt('Password321');
+        $password = 'Password321';
 
         $user = User::factory()->create([
-            'password' => $password
+            'email' => 'test@test.com',
+            'password' => bcrypt($password),
+            'email_verified_at' => now(),
         ]);
 
         $response = $this->post('/login', [

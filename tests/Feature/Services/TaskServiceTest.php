@@ -16,10 +16,6 @@ class TaskServiceTest extends TestCase
 {
     use RefreshDatabase;
 
-    /**
-     * Get tasks method is called once.
-     * @group services
-     */
     public function test_get_tasks_method_is_called_once(): void
     {
         $user = User::factory()->create();
