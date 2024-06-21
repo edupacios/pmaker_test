@@ -18,10 +18,18 @@ class TaskService implements ITaskService
     //     return Task::findOrFail($id);
     // }
 
-    // public function store(array $data): Task
-    // {
-    //     return Task::create($data);
-    // }
+    public function store(array $data): Task
+    {
+        $task = new Task();
+        $task->name = $data['name'];
+        $task->code = $data['code'];
+        $task->description = $data['description'];
+        $task->status = $data['status'];
+        $task->user_id = \Auth::user()->id;
+        $task->save();
+
+        return $task;
+    }
 
     // public function update(Task $task, array $data): Task
     // {

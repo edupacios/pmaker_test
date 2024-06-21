@@ -10,6 +10,6 @@ interface ITaskService
 {
     public function getTasks(): Collection;
     // public function get(int $id): Task;
-    // public function store(array $data): Task;
+    public function store(array $data): Task;
     // public function update(Task $task, array $data): Task;
 }

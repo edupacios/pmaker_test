@@ -28,6 +28,26 @@ class TaskServiceTest extends TestCase
             })
         );
 
-        $response = $this->get('/');
+        $this->get('/');
+    }
+
+    public function test_the_store_method_is_called_once(): void
+    {
+        $user = User::factory()->create();
+        $this->actingAs($user);
+
+        $this->instance(
+            TaskService::class,
+            Mockery::mock(TaskService::class, function (MockInterface $mock) {
+                $mock->shouldReceive('store')->once();
+            })
+        );
+
+        $this->post('/task', [
+            'name' => 'Task 1',
+            'code' => 'T1',
+            'description' => 'Description 1',
+            'status' => 'pending',
+        ]);
     }
 }
