@@ -47,13 +47,7 @@ class TaskController extends Controller
      */
     public function store(StoreTaskRequest $request)
     {
-        $task = new Task();
-        $task->name = $request->name;
-        $task->code = $request->code;
-        $task->description = $request->description;
-        $task->status = $request->status;
-        $task->user_id = \Auth::user()->id;
-        $task->save();
+        $task = $this->taskService->store($request->all());
 
         return redirect()->route('task.index');
     }

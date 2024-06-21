@@ -45,6 +45,7 @@ class TaskServiceTest extends TestCase
 
         $this->post('/task', [
             'name' => 'Task 1',
+            'user_id' => $user->id,
             'code' => 'T1',
             'description' => 'Description 1',
             'status' => 'pending',

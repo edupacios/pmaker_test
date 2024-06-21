@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1718848338">
-  <project timestamp="1718848338">
+<coverage generated="1719013395">
+  <project timestamp="1719013395">
     <file name="/var/www/html/app/Enums/Status.php">
       <metrics loc="8" ncloc="8" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
     </file>
@@ -69,10 +69,10 @@
     </file>
     <file name="/var/www/html/app/Http/Controllers/TaskController.php">
       <class name="App\Http\Controllers\TaskController" namespace="global">
-        <metrics complexity="4" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="17" coveredstatements="17" elements="21" coveredelements="21"/>
+        <metrics complexity="4" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="11" elements="15" coveredelements="15"/>
       </class>
-      <line num="16" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="4"/>
-      <line num="18" type="stmt" count="4"/>
+      <line num="16" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="5"/>
+      <line num="18" type="stmt" count="5"/>
       <line num="24" type="method" name="index" visibility="public" complexity="1" crap="1" count="2"/>
       <line num="26" type="stmt" count="2"/>
       <line num="28" type="stmt" count="2"/>
@@ -85,14 +85,8 @@
       <line num="42" type="stmt" count="1"/>
       <line num="48" type="method" name="store" visibility="public" complexity="1" crap="1" count="1"/>
       <line num="50" type="stmt" count="1"/>
-      <line num="51" type="stmt" count="1"/>
       <line num="52" type="stmt" count="1"/>
-      <line num="53" type="stmt" count="1"/>
-      <line num="54" type="stmt" count="1"/>
-      <line num="55" type="stmt" count="1"/>
-      <line num="56" type="stmt" count="1"/>
-      <line num="58" type="stmt" count="1"/>
-      <metrics loc="61" ncloc="52" classes="1" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="17" coveredstatements="17" elements="21" coveredelements="21"/>
+      <metrics loc="55" ncloc="46" classes="1" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="11" elements="15" coveredelements="15"/>
     </file>
     <file name="/var/www/html/app/Http/Middleware/HandleInertiaRequests.php">
       <class name="App\Http\Middleware\HandleInertiaRequests" namespace="global">
@@ -100,14 +94,14 @@
       </class>
       <line num="20" type="method" name="version" visibility="public" complexity="1" crap="1" count="5"/>
       <line num="22" type="stmt" count="5"/>
-      <line num="30" type="method" name="share" visibility="public" complexity="1" crap="1" count="10"/>
-      <line num="32" type="stmt" count="10"/>
-      <line num="33" type="stmt" count="10"/>
-      <line num="34" type="stmt" count="10"/>
-      <line num="35" type="stmt" count="10"/>
-      <line num="36" type="stmt" count="10"/>
-      <line num="37" type="stmt" count="10"/>
-      <line num="38" type="stmt" count="10"/>
+      <line num="30" type="method" name="share" visibility="public" complexity="1" crap="1" count="11"/>
+      <line num="32" type="stmt" count="11"/>
+      <line num="33" type="stmt" count="11"/>
+      <line num="34" type="stmt" count="11"/>
+      <line num="35" type="stmt" count="11"/>
+      <line num="36" type="stmt" count="11"/>
+      <line num="37" type="stmt" count="11"/>
+      <line num="38" type="stmt" count="11"/>
       <metrics loc="41" ncloc="28" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="8" elements="10" coveredelements="10"/>
     </file>
     <file name="/var/www/html/app/Http/Requests/Auth/LoginRequest.php">
@@ -148,14 +142,14 @@
       <class name="App\Http\Requests\StoreTaskRequest" namespace="global">
         <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="8" coveredelements="8"/>
       </class>
-      <line num="12" type="method" name="authorize" visibility="public" complexity="1" crap="1" count="1"/>
-      <line num="14" type="stmt" count="1"/>
-      <line num="22" type="method" name="rules" visibility="public" complexity="1" crap="1" count="1"/>
-      <line num="24" type="stmt" count="1"/>
-      <line num="25" type="stmt" count="1"/>
-      <line num="26" type="stmt" count="1"/>
-      <line num="27" type="stmt" count="1"/>
-      <line num="28" type="stmt" count="1"/>
+      <line num="12" type="method" name="authorize" visibility="public" complexity="1" crap="1" count="2"/>
+      <line num="14" type="stmt" count="2"/>
+      <line num="22" type="method" name="rules" visibility="public" complexity="1" crap="1" count="2"/>
+      <line num="24" type="stmt" count="2"/>
+      <line num="25" type="stmt" count="2"/>
+      <line num="26" type="stmt" count="2"/>
+      <line num="27" type="stmt" count="2"/>
+      <line num="28" type="stmt" count="2"/>
       <metrics loc="31" ncloc="23" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="8" coveredelements="8"/>
     </file>
     <file name="/var/www/html/app/Http/Requests/UpdateTaskRequest.php">
@@ -185,35 +179,44 @@
       <class name="App\Models\User" namespace="global">
         <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="5" coveredelements="5"/>
       </class>
-      <line num="41" type="method" name="casts" visibility="protected" complexity="1" crap="1" count="10"/>
-      <line num="43" type="stmt" count="10"/>
-      <line num="44" type="stmt" count="10"/>
-      <line num="45" type="stmt" count="10"/>
-      <line num="46" type="stmt" count="10"/>
+      <line num="41" type="method" name="casts" visibility="protected" complexity="1" crap="1" count="11"/>
+      <line num="43" type="stmt" count="11"/>
+      <line num="44" type="stmt" count="11"/>
+      <line num="45" type="stmt" count="11"/>
+      <line num="46" type="stmt" count="11"/>
       <metrics loc="49" ncloc="33" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="5" coveredelements="5"/>
     </file>
     <file name="/var/www/html/app/Providers/AppServiceProvider.php">
       <class name="App\Providers\AppServiceProvider" namespace="global">
         <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="3" elements="5" coveredelements="3"/>
       </class>
-      <line num="15" type="method" name="boot" visibility="public" complexity="1" crap="1.02" count="12"/>
-      <line num="17" type="stmt" count="12"/>
+      <line num="15" type="method" name="boot" visibility="public" complexity="1" crap="1.02" count="13"/>
+      <line num="17" type="stmt" count="13"/>
       <line num="18" type="stmt" count="0"/>
-      <line num="19" type="stmt" count="12"/>
-      <line num="21" type="stmt" count="12"/>
+      <line num="19" type="stmt" count="13"/>
+      <line num="21" type="stmt" count="13"/>
       <metrics loc="24" ncloc="21" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="3" elements="5" coveredelements="3"/>
     </file>
     <file name="/var/www/html/app/Services/Task/ITaskService.php">
-      <metrics loc="15" ncloc="12" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      <metrics loc="15" ncloc="13" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
     </file>
     <file name="/var/www/html/app/Services/Task/TaskService.php">
       <class name="App\Services\Task\TaskService" namespace="global">
-        <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+        <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="9" elements="11" coveredelements="11"/>
       </class>
       <line num="11" type="method" name="getTasks" visibility="public" complexity="1" crap="1" count="1"/>
       <line num="13" type="stmt" count="1"/>
-      <metrics loc="31" ncloc="18" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+      <line num="21" type="method" name="store" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="23" type="stmt" count="1"/>
+      <line num="24" type="stmt" count="1"/>
+      <line num="25" type="stmt" count="1"/>
+      <line num="26" type="stmt" count="1"/>
+      <line num="27" type="stmt" count="1"/>
+      <line num="28" type="stmt" count="1"/>
+      <line num="29" type="stmt" count="1"/>
+      <line num="31" type="stmt" count="1"/>
+      <metrics loc="39" ncloc="30" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="9" elements="11" coveredelements="11"/>
     </file>
-    <metrics files="15" loc="539" ncloc="424" classes="12" methods="25" coveredmethods="23" conditionals="0" coveredconditionals="0" statements="104" coveredstatements="95" elements="129" coveredelements="118"/>
+    <metrics files="15" loc="541" ncloc="431" classes="12" methods="26" coveredmethods="24" conditionals="0" coveredconditionals="0" statements="106" coveredstatements="97" elements="132" coveredelements="121"/>
   </project>
 </coverage>
